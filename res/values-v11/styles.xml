@@ -1,0 +1,32 @@
+<resources>
+
+    <!--
+        Base application theme for API 11+. This theme completely replaces
+        AppBaseTheme from res/values/styles.xml on API 11+ devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!-- API 11 theme customizations can go here. -->
+    </style>
+
+     <!-- Variation on the Holo Light theme that styles the Action Bar -->
+    <style name="Theme.HoloGreen" parent="Theme.Sherlock.Light.DarkActionBar">                
+        <item name="actionBarItemBackground">@drawable/ad_selectable_background</item>         
+        <item name="actionBarStyle">@style/green_action_bar</item>
+        <item name="android:actionBarStyle">@style/green_action_bar</item>
+    	<item name="android:editTextBackground">@drawable/edit_text_holo_light</item>
+    	
+        <!--<item name="android:actionOverflowButtonStyle">@style/MyOverflowButton</item>-->
+    </style>    
+        
+    <style name="green_action_bar" parent="Widget.Sherlock.Light.ActionBar">        
+        <item name="android:background">@color/holo_green_light</item>
+        <item name="background">@color/holo_green_light</item>
+        <item name="titleTextStyle">@style/Theme.MyAppTheme.ActionBar.TitleTextStyle</item>
+        <item name="android:titleTextStyle">@style/Theme.MyAppTheme.ActionBar.TitleTextStyle</item>        
+    </style>
+    
+    <style name="Theme.MyAppTheme.ActionBar.TitleTextStyle" parent="TextAppearance.Sherlock.Widget.ActionBar.Title">
+	    <item name="android:textColor">#ffffffff</item>	    
+	    <item name="android:textSize">25sp</item>
+	</style>
+</resources>

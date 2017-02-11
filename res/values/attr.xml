@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ReferencePreferenceAtts">
+        <attr name="textLeft" format="reference"/>
+        <attr name="textRight" format="reference"/>
+        <attr name="noColorChange" format="boolean"/>
+        <attr name="selectorDefault" format="boolean"/>
+        <attr name="valuesNames" format="reference"/>
+        <attr name="valuesIds" format="reference"/>
+        <attr name="manualStateChange" format="boolean"/>
+    </declare-styleable>
+</resources>

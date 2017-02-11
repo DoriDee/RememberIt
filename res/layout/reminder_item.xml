@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingTop="14dip"
+              android:paddingBottom="14dip">
+
+        <TextView
+            android:id="@+id/txtReminder"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center|left"
+            android:layout_marginRight="120dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:paddingLeft="14dip"            
+            android:text="Take out the trash you damn whore!!! Or I will kill you!!!"
+            android:textSize="25sp" />
+
+        <!--<ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnActivate"
+                android:focusable="false"
+                android:background="@null"
+                android:layout_gravity="center|right"
+                android:layout_alignParentRight="true"
+                android:paddingRight="5dip"
+                android:src="@drawable/ic_action_wifi"/>
+-->
+<!-- 
+    <View
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dip"
+            android:layout_marginBottom="5dip"
+            android:background="#beccdb"/>
+-->
+
+    <TextSwitcher
+        android:id="@+id/textswitcher"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="right"
+        android:paddingRight="10dip"
+        android:visibility="visible"
+        android:text="@string/hello_world" />
+
+</RelativeLayout>

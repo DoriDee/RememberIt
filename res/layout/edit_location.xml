@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <!-- <Label
+        android:src="@drawable/header_logo"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:scaleType="center"
+        android:background="#FFFFBB33"
+        android:contentDescription="@string/app_name" /> -->
+
+    <TextView        
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:scaleType="center"
+        android:background="@color/holo_green_light"
+        android:textSize="20sp"
+        android:paddingLeft="14dp"
+        android:paddingTop="14dp"
+        android:layout_gravity="center"
+        android:layout_centerVertical="true"
+        android:textColor="#ffffffff"
+        android:text="@string/edit_location" />
+       
+    <TextView
+        android:id="@+id/wifiName"     
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:color="#808080"
+        android:textSize="16sp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"        
+        android:hint="@string/wifi_name" />
+    
+    <EditText
+        android:id="@+id/locationName"
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:hint="@string/location_name" />
+    
+</LinearLayout>

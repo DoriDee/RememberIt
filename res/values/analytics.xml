@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyDashes">    
+  <!--Replace placeholder ID with your tracking ID-->
+  <string name="ga_trackingId">UA-44971869-1</string>
+
+  <!--Enable automatic activity tracking-->
+  <bool name="ga_autoActivityTracking">true</bool>
+
+  <!--Enable automatic exception tracking-->
+  <bool name="ga_reportUncaughtExceptions">true</bool>
+
+  <bool name="ga_debug">true</bool>
+
+  <!-- The screen names that will appear in reports -->
+  <string name="com.dorid.android.rememberit.locations.LocationsActivity">Locations</string>
+  <string name="com.dorid.android.rememberit.reminders.RemindersActivity">Reminders</string>
+  <string name="com.dorid.android.rememberit.reminders.EditReminderActivity">Edit Reminder</string>
+</resources>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffffffff">
+
+    <EditText
+        android:id="@+id/editReminder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"        
+        android:layout_gravity="center|left"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:hint="@string/reminder_hint"
+        android:lines="1"
+        android:maxLength="43"
+        android:paddingBottom="14dp"        
+        android:paddingLeft="10dp"
+        android:paddingTop="14dp"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <!--
+    	WHEN: arrival/leaving
+    -->	
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:paddingBottom="0dp"
+        android:paddingLeft="14dp"
+        android:paddingTop="10dp"
+        android:text="@string/when"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/holo_green_light"
+        android:textStyle="bold" />
+    <!--horiz bar-->
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:background="@color/holo_green_light" />
+    <!-- buttons -->
+    <LinearLayout
+        android:id="@+id/Condition"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/viewArrival"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:orientation="vertical" >
+                
+                 <TextView
+                     android:id="@+id/title"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerHorizontal="true"
+                     android:layout_centerVertical="true"
+                     android:layout_gravity="center"
+                     android:drawableLeft="@drawable/ic_action_import"
+                     android:text="@string/arriving"
+                     android:textColor="@color/dark_green"
+                     android:textSize="22sp" />
+                
+                <View
+                    android:id="@+id/arrivalSelected"
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:layout_alignParentBottom="true"
+					android:layout_marginLeft="14dp"
+                    android:background="@color/holo_green_light" />
+                
+            </RelativeLayout>
+            
+            <View
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dip"
+                    android:layout_marginBottom="5dip"
+                    android:background="#beccdb"/>
+
+            <RelativeLayout
+                android:id="@+id/viewDeparture"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:orientation="vertical" >
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerHorizontal="true"
+                     android:layout_centerVertical="true"
+                     android:layout_gravity="center"
+                     android:drawableLeft="@drawable/ic_action_export"
+                     android:text="@string/leaving"
+                     android:textColor="@color/dark_green"
+                     android:textSize="22sp" />
+
+
+              <View
+                  android:id="@+id/departureSelected"
+                  android:layout_width="fill_parent"
+                  android:layout_height="5dp"
+                  android:layout_alignParentBottom="true"
+                  android:background="@color/holo_green_light"
+                  android:layout_marginRight="14dp"
+                  android:visibility="gone" />
+               
+            </RelativeLayout>        
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:background="#beccdb" />
+
+    
+    <!--
+    	REPEAT: on/off 
+     -->
+<!-- OPTION 1: Color/Gray icon
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="10dp" >
+
+    <TextView
+        android:id="@+id/repeatToggle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:layout_marginLeft="5dp"
+        android:height="40dp"
+        android:paddingBottom="0dp"
+        android:paddingLeft="14dp"
+        android:paddingTop="4dp"
+        android:text="@string/repeat_toggle"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/holo_green_light"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/repeatButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginRight="5dp"
+        android:contentDescription="@string/repeat_toggle"
+        android:src="@drawable/ic_action_playback_repeat_on" />
+    
+</LinearLayout>
+-->
+<!-- OPTION 2: Repeat checkbox
+<TextView
+    android:id="@+id/repeatToggle"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:paddingBottom="0dp"
+    android:paddingLeft="14dp"
+    android:paddingTop="20dp"
+    android:text="@string/repeat_toggle"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:textColor="@color/holo_green_light"
+    android:textStyle="bold"
+    android:height="40dp"
+    android:drawableLeft="@drawable/ic_action_checked"/>
+-->
+<!-- OPTION 3: Always|Once toggling -->
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:paddingBottom="0dp"
+        android:paddingLeft="14dp"
+        android:paddingTop="10dp"
+        android:text="@string/repeat"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/holo_green_light"
+        android:textStyle="bold" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:background="@color/holo_green_light" />
+    <!-- buttons -->
+    <LinearLayout
+        android:id="@+id/ConditionRepeat"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+
+        	<!-- on -->
+        	<RelativeLayout
+                android:id="@+id/viewRepeatOn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:orientation="vertical" >
+                
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerHorizontal="true"
+                     android:layout_centerVertical="true"
+                     android:layout_gravity="center"
+                     android:drawableLeft="@drawable/ic_action_playback_repeat"
+                     android:text="@string/repeat_on"
+                     android:textColor="@color/dark_green"
+                     android:textSize="22sp" />
+                
+                <View
+                    android:id="@+id/repeatOnSelected"
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:layout_alignParentBottom="true"
+					android:layout_marginLeft="14dp"
+                    android:background="@color/holo_green_light" />
+            </RelativeLayout>
+            
+            <View
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dip"
+                    android:layout_marginBottom="5dip"
+                    android:background="#beccdb"/>
+
+            <!-- off -->
+            <RelativeLayout
+                android:id="@+id/viewRepeatOff"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:orientation="vertical" >
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerHorizontal="true"
+                     android:layout_centerVertical="true"
+                     android:layout_gravity="center"
+                     android:drawableLeft="@drawable/ic_action_tick"
+                     android:text="@string/repeat_off"
+                     android:textColor="@color/dark_green"
+                     android:textSize="22sp" />
+
+              <View
+                  android:id="@+id/repeatOffSelected"
+                  android:layout_width="fill_parent"
+                  android:layout_height="5dp"
+                  android:layout_alignParentBottom="true"
+                  android:background="@color/holo_green_light"
+                  android:layout_marginRight="14dp"
+                  android:visibility="gone" />
+               
+            </RelativeLayout>        
+    </LinearLayout>
+
+
+
+</LinearLayout>

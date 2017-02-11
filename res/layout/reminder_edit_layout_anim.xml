@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">                      
+    <!-- <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="#3087B4"/>      -->      
+    
+<!-- 
+    <LinearLayout
+        android:id="@+id/guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone" >
+		        
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="0dip"
+	        android:layout_gravity="center_vertical|center_horizontal|bottom"
+	        android:layout_weight="1"
+	        android:background="#ffffffff"
+	        android:gravity="center_horizontal|center_vertical|bottom"
+	        android:text="Tap to add a reminder"
+	        android:textStyle="bold"
+	        android:textColor="#ff33b5e5"
+	        android:textSize="30sp" />
+	         
+	    <ImageView
+	        android:layout_width="64dip"
+	        android:layout_height="64dip"
+	        android:layout_gravity="center_vertical|center_horizontal"
+	        android:background="#ffffffff"
+	        android:src="@drawable/ic_action_arrow_bottom" />
+ 
+    </LinearLayout> 
+    
+    -->
+    <!-- SECRET TOOLTIP -->
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:layout_above="@+id/reminderSeperator"
+        android:layout_marginBottom="-60dp"
+        android:background="#FFFFFF"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <View   android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#beccdb"/>
+
+        <LinearLayout android:id="@id/toolbar"
+                      android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:visibility="visible"
+                      android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/viewArrival"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:orientation="vertical" >
+
+                <View   android:id="@+id/arrivalSelected"
+                        android:layout_width="fill_parent"
+                        android:layout_height="5dp"
+                        android:background="#33B5E5"/>
+
+                <LinearLayout android:layout_width="fill_parent"
+                              android:layout_height="fill_parent"
+                              android:gravity="center"
+                              android:layout_gravity="center_vertical"
+                              android:orientation="horizontal"
+                              android:layout_weight="1"
+                              android:id="@+id/aa">
+                    <ImageView
+                            android:id="@+id/bb"
+                            android:layout_width="48dip"
+                            android:layout_height="48dip"
+                            android:src="@drawable/ic_action_import"
+                            android:background="@drawable/background"
+                            android:layout_gravity="center"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Arrival"
+                            android:id="@+id/title"
+                            android:textSize="22dp"
+                            android:textColor="#33B5E5"
+                            android:layout_gravity="center"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dip"
+                    android:layout_marginBottom="5dip"
+                    android:background="#beccdb"/>
+
+
+            <RelativeLayout android:id="@+id/viewDeparture"
+                            android:layout_width="fill_parent"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                    >
+
+                <View   android:id="@+id/departureSelected"
+                        android:layout_width="fill_parent"
+                        android:layout_height="5dp"
+                        android:background="#33B5E5"
+                        android:visibility="gone"/>
+
+                <LinearLayout android:layout_width="fill_parent"
+                              android:layout_height="fill_parent"
+                              android:gravity="center"
+                              android:layout_gravity="center_vertical"
+                              android:orientation="horizontal"
+                              android:layout_weight="1">
+                    <ImageView
+                            android:layout_width="48dip"
+                            android:layout_height="48dip"
+                            android:src="@drawable/ic_action_export"
+                            android:background="@drawable/background"
+                            android:layout_gravity="center"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Departure"
+                            android:id="@id/title"
+                            android:textSize="22dp"
+                            android:textColor="#33B5E5"
+                            android:layout_gravity="center"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/reminderSeperator"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_above="@+id/reminderBox"
+        android:layout_gravity="top"
+        android:background="#beccdb" />
+
+    <RelativeLayout
+        android:id="@+id/reminderBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="#FFFFFF"
+        android:gravity="bottom|end"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" >
+
+ <!--"#abdcef"> -->
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editReminder"
+                android:singleLine="true"
+                android:lines="1"
+                android:layout_gravity="center|left"
+                android:hint="@string/reminder_hint"
+                android:maxLength="43"
+                android:layout_marginRight="32dp"
+                android:background="@null"
+                android:visibility="visible"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                />
+        <!--"@drawable/custom_edit_text"-->
+        <ImageButton android:id="@+id/btnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone"
+                android:background="@null"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_action_add"/>
+
+        <ImageButton android:id="@+id/btnConfirm"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_vertical"
+                     android:visibility="gone"
+                     android:background="@null"
+                     android:layout_alignParentRight="true"
+                     android:src="@drawable/ic_action_tick"/>
+    </RelativeLayout>
+
+    <!--
+    <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="#beccdb"/>
+            /> -->
+
+
+    <!-- SECRET TOOLTIP -->
+    
+</RelativeLayout>

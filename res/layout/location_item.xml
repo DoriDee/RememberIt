@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/list_selector"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:paddingBottom="14dip"
+    android:paddingTop="14dip" >
+
+    <ImageView
+        android:id="@+id/locationIcon"
+        android:layout_width="64dip"
+        android:layout_height="64dip"
+        android:layout_gravity="left|center_vertical|fill_vertical|top|center_horizontal"
+        android:clickable="false"
+        android:paddingLeft="14dp"
+        android:src="@drawable/ic_action_home" />
+
+    <LinearLayout
+        android:layout_width="226dp"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtLocationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:text="Home"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtWifiName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|fill"
+            android:paddingLeft="10dp"
+            android:text="dembinet"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/soft_grey"
+            android:textSize="14sp"
+            android:color="#808080" />
+    </LinearLayout>
+    <!--
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/set_current"
+            android:id="@+id/btnSetCurrent"
+            android:layout_gravity="right|center_vertical"
+            android:gravity="right"
+            android:enabled="false"
+            />
+    -->
+
+    <ImageButton
+        android:id="@+id/btnEdit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:src="@drawable/ic_action_edit" />
+
+</LinearLayout>

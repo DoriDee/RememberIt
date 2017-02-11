@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2011 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Variation on the Holo Light theme that styles the Action Bar -->
+    <style name="Theme.HoloGreen" parent="Theme.Sherlock.Light.DarkActionBar">
+        <!-- <item name="android:actionBarItemBackground">@drawable/ad_selectable_background</item> -->
+        <!-- <item name="android:background">@color/holo_blue_light</item> -->
+        <item name="actionBarItemBackground">@drawable/ad_selectable_background</item>
+        <item name="actionBarStyle">@style/green_action_bar</item>
+        <!--<item name="android:actionOverflowButtonStyle">@style/MyOverflowButton</item>-->
+        <!-- item name="switchStyle">@style/switch_light</item -->
+    	<!-- item name="textAppearance">@style/TextAppearance</item -->
+    	<item name="android:editTextStyle">@style/EditTextAppTheme</item>    	
+    </style>    
+        	    
+	<style name="EditTextAppTheme" parent="android:Widget.EditText">
+		<item name="android:background">@drawable/edit_text_holo_light</item>
+		<item name="android:textColor">#000000</item>
+	</style>
+	    
+    <style name="green_action_bar" parent="Widget.Sherlock.Light.ActionBar">        
+        <item name="android:background">@color/holo_green_light</item>
+        <item name="background">@color/holo_green_light</item>
+        <item name="titleTextStyle">@style/Theme.MyAppTheme.ActionBar.TitleTextStyle</item>        
+    </style>
+    
+    <style name="Theme.MyAppTheme.ActionBar.TitleTextStyle" parent="TextAppearance.Sherlock.Widget.ActionBar.Title">
+	    <item name="android:textColor">#ffffffff</item>	    
+	    <item name="android:textSize">20sp</item>
+	</style>	
+	
+    <style name="PauseDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowTitleStyle">@style/PauseDialogTitle</item>
+        <item name="android:background">#FFFFFF</item>
+    </style>
+
+    <style name="PauseDialogTitle" parent="@android:style/TextAppearance.DialogWindowTitle">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/holo_green_light</item>        
+    </style>
+
+    <style name="DialogWindowTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.DialogWindowTitle</item>        
+    </style>    
+</resources>
